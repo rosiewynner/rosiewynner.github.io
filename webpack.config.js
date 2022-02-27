@@ -46,7 +46,6 @@ module.exports = {
       filename: './index.html',
       favicon: './public/favicon.ico',
       manifest: './public/manifest.json'
-
     })
   ]
 }
