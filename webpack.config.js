@@ -2,6 +2,7 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
   // Which file is the entry point to the application
   entry: './src/index.js',
@@ -36,11 +37,16 @@ module.exports = {
       }
     ]
   },
+  optimization: {
+    minimize: false 
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: './index.html',
-      favicon: './public/favicon.ico'
+      favicon: './public/favicon.ico',
+      manifest: './public/manifest.json'
+
     })
   ]
 }

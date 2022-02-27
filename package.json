@@ -35,7 +35,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
     "start": "webpack serve --mode development",
-    "build": "webpack -p --display-error-details --color",
+    "build": "webpack --mode production",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
