@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://rosiewynner.github.io/",
+  "homepage": "https://rosiewynner.github.io",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -b master -d dist",
     "serve": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
