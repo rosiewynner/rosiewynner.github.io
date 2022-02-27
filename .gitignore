@@ -1,0 +1,11 @@
+# Dependency directories
+node_modules/
+
+# Generated files
+dist/
+build/
+.out
+*.min.js
+*.min.js.map
+.idea/
+videos/

@@ -4,18 +4,38 @@
   "private": true,
   "homepage": "https://rosiewynner.github.io/",
   "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "bootstrap": "^5.1.3",
+    "html-webpack-plugin": "^5.5.0",
+    "react": "^16.14.0",
+    "react-bootstrap": "^2.1.2",
+    "react-dom": "^16.14.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^6.6.0",
+    "file-loader": "^6.2.0",
     "gh-pages": "^3.2.3",
-    "react-scripts": "1.0.7"
+    "react-scripts": "1.0.7",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "webpack serve --mode development",
+    "build": "webpack -p --display-error-details --color",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
