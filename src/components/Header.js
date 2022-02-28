@@ -12,7 +12,7 @@ export function Header() {
     <Container>
     <Navbar.Brand href="#home">Rosalie Ross </Navbar.Brand>
     <a href='https://www.linkedin.com/in/rosalieross//'> 
-    <img src='src/assets/linkedin-icon.png' alt='instagram' style={{width: '35px'}}/>
+    <img src='src/assets/linkedin-icon.png' alt='linkedin' style={{width: '35px'}}/>
     </a>   
  <a href='https://www.kickstarter.com/projects/1444231543/dont-let-ice-creams-be-dreams/description'>
     <img src='src/assets/kickstarter-icon.png' alt='kickstarter'style={{width: '35px'}}/>
