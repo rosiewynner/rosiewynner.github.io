@@ -28,8 +28,16 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(woff2|png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
+                test: /\.(png|jpg|jpeg|gif|json|xml|ico|svg)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                    name: '[name].[ext]',
+                    outputPath: 'assets/',
+                    }
+                }
+                ]
             }
         ]
     },

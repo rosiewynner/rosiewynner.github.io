@@ -1,4 +1,5 @@
 import React from 'react';
+import HikingImage from '../assets/hiking.jpeg';
 
 export function HomePage() {
   return (
@@ -8,7 +9,7 @@ export function HomePage() {
 </div>
   <div style={{display:'flex', flexDirection:'row', margin: '15px' }}>
     <h2 style={{width: '50%', alignSelf: 'center'}}>Hi! I'm Rosie.</h2>
-    <img src='src/assets/hiking.jpeg' alt='Snowshoeing in Utah!' width='50%'/>
+    <img src={HikingImage} alt='Snowshoeing in Utah!' width='50%'/>
 
     </div> 
     </div>

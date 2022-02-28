@@ -1,5 +1,7 @@
 import React from 'react';
 import InstaFeeds from '../insta-feed/instafeed'
+import InstaIcon from '../assets/instagram-icon.jpeg'
+import KickStartIcon from '../assets/kickstarter-icon.png'
 
 export function IceCream() {
   return (
@@ -13,12 +15,12 @@ export function IceCream() {
     <div  style={{width: '100%', margin: '10px', display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>  
 <div style={{ margin: '10px'}}>
  <a href='https://www.kickstarter.com/projects/1444231543/dont-let-ice-creams-be-dreams/description'>
-    <img src='src/assets/kickstarter-icon.png' alt='kickstarter' width='50px'/>
+    <img src={KickStartIcon} alt='kickstarter' width='50px'/>
     </a>
     </div> 
     <div style={{ margin: '10px'}}>
     <a href='https://www.instagram.com/icecreamdreamsca/'> 
-    <img src='src/assets/instagram-icon.jpeg' alt='instagram' width='50px'/>
+    <img src={InstaIcon} alt='instagram' width='50px'/>
     </a></div>    </div> 
 
 </div>
