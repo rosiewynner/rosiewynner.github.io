@@ -30,6 +30,7 @@ const Feed = (props) => {
             break;
         default:
             post = (
+                <div>
                 <img 
                     width='100%'
                     height='auto'
@@ -37,6 +38,8 @@ const Feed = (props) => {
                     src={media_url} 
                     alt={caption} 
                 />
+                <div>{caption}</div>
+                </div>
             );
     }       
 

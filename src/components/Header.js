@@ -11,6 +11,7 @@ import '../App.scss';
 
 export function Header() {
   return (
+    <div style={{height:'86px'}}>
     <Navbar bg="light" expand="lg" fixed="top">
     <Container>
     <Navbar.Brand href="#home">Rosalie Ross </Navbar.Brand>
@@ -37,6 +38,7 @@ export function Header() {
     </Navbar.Collapse>
     </Container>
 </Navbar>
+</div >
   );
 };
 
