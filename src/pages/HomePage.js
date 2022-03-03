@@ -1,100 +1,87 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
-// import HikingImage from '../assets/hiking.jpeg';
-// import PaperPlaneIcon from  '../assets/paper-plane.png'
-// import IthacaImage from '../assets/taughannock.svg'
-// import CornellImage from '../assets/cornell.svg'
-// import MetzImage from '../assets/metz.svg'
-// import GraduationImage from '../assets/graduation.svg'
+import React from 'react';
+import Ithaca from '../assets/ithaca-polaroid.svg'
+import Cornell from '../assets/cornell-polaroid.svg'
+import Graduation from '../assets/graduation-polaroid.svg'
+import Metz from '../assets/metz-polaroid.svg'
+import PushPin from '../assets/push-pin.png'
+import PushPin2 from '../assets/push-pin-2.png'
+import PushPin3 from '../assets/push-pin-3.png'
+import Hiking from '../assets/hiking.jpeg'
+import Yellowstone from '../assets/yellowstone.jpg'
+import Glacier from '../assets/glacier.jpg'
+import Note from '../assets/note.png'
 
-import Ithaca from '../assets/ithaca-poloroid.svg'
-import Cornell from '../assets/cornell-poloroid.svg'
-import Graduation from '../assets/graduation-poloroid.svg'
-import Metz from '../assets/metz-poloroid.svg'
+import Draggable from 'react-draggable';
 
+
+import '../assets/hate_your_writing/Regular.ttf';
 
 import './HomePage.scss';
 
 export function HomePage() {
 
-  const refRef = useRef(null);
-  // const topPos = refRef.current.getBoundingClientRect().top;
-
-  const [position, setPosition] = useState(0);
-
-  useLayoutEffect(() => {
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-const onScroll = () => {
-setPosition(window.scrollY);
-}
-
   return (
-    <div class="page" style={{display:'flex', flexDirection : 'row', height:'2000px'}}>
-            <div style={{display:'flex', flexDirection : 'column'}}>
-{/* <h1 class="date" >1997</h1> */}
-</div>
-     <img src={Ithaca} height='600px'/>
-     <img src={Cornell}height='600px' />
-    <img src={Metz}height='600px' />
-    <img src={Graduation}height='600px' />
+    <div class="page" style={{display:'flex', flexDirection : 'column', height:'2000px'}}>
+<div style={{display: 'flex', flexDirection: 'row'}}>
+     <Draggable handle="#handle">
+       <div className={'ithaca'} style={{marginLeft: `${Math.random()*50}px`, marginTop:`${Math.random()*50}px`}}>
+         <img id="handle" src={PushPin} width='40px' style={{position: 'absolute', marginLeft: '180px'}}/>
+         <img  src={Ithaca} height='400px'/>
+         </div>
+         </Draggable>
+         <Draggable handle="#handle">
+       <div className={'cornell'} style={{marginLeft: `${Math.random()*50}px`, marginTop:`${Math.random()*50}px`}}>
+         <img id="handle" src={PushPin2} width='40px' style={{position: 'absolute', marginLeft: '180px'}}/>
+         <img  src={Cornell} height='400px'/>
+         </div>
+         </Draggable>
+         <Draggable handle="#handle">
+       <div className={'metz'} style={{marginLeft: `${Math.random()*50}px`, marginTop:`${Math.random()*50}px`}}>
+         <img id="handle" src={PushPin3} width='40px' style={{position: 'absolute', marginLeft: '180px'}}/>
+         <img  src={Metz} height='400px'/>
+         </div>
+         </Draggable>
+         <Draggable handle="#handle">
+       <div className={'graduation'} style={{marginLeft: `${Math.random()*50}px`, marginTop:`${Math.random()*50}px`}}>
+         <img id="handle" src={PushPin} width='40px' style={{position: 'absolute', marginLeft: '180px'}}/>
+         <img  src={Graduation} height='400px'/>
+         </div>
+         </Draggable>
+         </div>
+         <div style={{display: 'flex', flexDirection: 'row'}}>
+     <Draggable handle="#handle">
+       <div className={'note'} style={{marginLeft: `${Math.random()*50}px`, marginTop:`${Math.random()*50}px`}}>
+         <img id="note" src={PushPin} width='40px' style={{position: 'absolute', marginLeft: '230px'}}/>
+         {/* <h1 class='handwriting' style={{marginTop: '15px', marginLeft: '280px'}}>Snowshoeing in Utah!</h1> */}
+         <img  src={Note} width='500px'/>
+         </div>
+         </Draggable>
+         </div>
+         <div style={{display: 'flex', flexDirection: 'row'}}>
+     <Draggable handle="#handle">
+       <div className={'snowshoeing'} style={{marginLeft: `${Math.random()*50}px`, marginTop:`${Math.random()*50}px`}}>
+         <img id="handle" src={PushPin} width='40px' style={{position: 'absolute', marginLeft: '230px'}}/>
+         <h1 class='handwriting' style={{marginTop: '15px', marginLeft: '280px'}}>Snowshoeing in Utah!</h1>
+         <img  src={Hiking} width='500px'/>
+         </div>
+         </Draggable>
+         <Draggable handle="#handle">
+       <div className={'glacier'} style={{marginLeft: `${Math.random()*50}px`, marginTop:`${Math.random()*50}px`}}>
+         <img id="handle" src={PushPin2} width='40px' style={{position: 'absolute', marginLeft: '230px'}}/>
+         <h1 class='handwriting' style={{marginTop: '250px', marginLeft: '280px'}}>Glacier National Park</h1>
+         <img  src={Glacier} width='500px'/>
+         </div>
+         </Draggable>
+         <Draggable handle="#handle">
+       <div className={'yellowstone'} style={{marginLeft: `${Math.random()*50}px`, marginTop:`${Math.random()*50}px`}}>
+         <img id="handle" src={PushPin3} width='40px' style={{position: 'absolute', marginLeft: '230px'}}/>
+         <h1 class='handwriting' style={{marginTop: '15px', marginLeft: '280px'}}>Yellowstone</h1>
+         <img  src={Yellowstone} width='500px'/>
+         </div>
+         </Draggable>
+         </div>
 
     </div>
 );
   }
 
-
-
-  ///  <div style={{display:'flex', flexDirection:'row', margin: '15px' }}>
-    // <h2 style={{width: '50%', alignSelf: 'center'}}>Hi! I'm Rosie.</h2>
-    // <img src={HikingImage} alt='Snowshoeing in Utah!' width='50%'/>
-    // </div> 
-
-
-  //   <div class="verticalLine" />
-  //   <div style={{display:'flex', flexDirection : 'column'}}>
-  //     <img src={IthacaImage} height='300px'/>
-  //     <div style={{display:'flex', flexDirection : 'row', height:'300px'}}>
-  //     <div class="horizontalLine"></div>
-  //     <h1 class="bio">Born and Raised in Ithaca, NY</h1>
-  //     </div>
-  //     <img src={CornellImage} height='300px'/>
-  //     <div style={{display:'flex', flexDirection : 'row', height:'300px'}}>
-  //     <div class="horizontalLine"></div>
-  //     <h1 class="bio"> Started study at Cornell University</h1>
-  //     </div>
-  //     <img src={MetzImage} height='300px'/>
-  //     <div style={{display:'flex', flexDirection : 'row', height:'300px'}}>
-  //     <div class="horizontalLine"></div>
-  //     <h1 class="bio">Studied Abroad in Metz, France</h1>
-  //     </div>
-  //     <img src={GraduationImage} height='300px'/>
-  //     <div style={{display:'flex', flexDirection : 'row', height:'300px'}}>
-  //     <div class="horizontalLine"></div>
-  //     <h1 class="bio">Graduated with a Bachelors in Computer Science</h1>
-  //     </div>
-  //     <div style={{display:'flex', flexDirection : 'row', height:'300px'}}>
-  //     <div class="horizontalLine"></div>
-  //     <h1 class="bio"> Started studying computer science at Cornell University</h1>
-  //     </div>
-  //     <div style={{display:'flex', flexDirection : 'row',}}>
-  //     <div class="horizontalLine"></div>
-  //     <h1 class="bio"> Started studying computer science at Cornell University</h1>
-  //     </div> 
-  //     <div style={{display:'flex', flexDirection : 'row', height:'100px'}}>
-  //     <div class="horizontalLine"></div>
-  //     <h1 class="bio"> Started studying computer science at Cornell University</h1>
-  //     </div>
-  //     <div style={{display:'flex', flexDirection : 'row', height:'100px'}}>
-  //     <div class="horizontalLine"></div>
-  //     <h1 class="bio"> Started studying computer science at Cornell University</h1>
-  //     </div>
-  //     <div style={{display:'flex', flexDirection : 'row', height:'100px'}}>
-  //     <div class="horizontalLine"></div>
-  //     <h1 class="bio">Moved to California to start work full time at Workday Inc</h1>
-  //     {/* <img ref={refRef} class="slideanim" src={PaperPlaneIcon} style={{width:'50px', marginLeft: position, }} /> */}
-
-  //     </div>
-  //  <div style={{margin: '5px'}}> 
-  // </div>

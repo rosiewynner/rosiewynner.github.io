@@ -31,4 +31,25 @@
   margin-top: 180px;
 }
 
+.page {
+  background-image: url('../assets/cork.jpeg');
+  // background-size: cover;   
+}
+
+.polaroid {
+  position: absolute;
+}
+
+@font-face {
+  font-family: 'HandWriting';
+  src: local('HandWriting'),
+   url(../assets/hate_your_writing/Regular.ttf) format('truetype');
+}
+
+.handwriting {
+  font-family: "HandWriting";
+  position: absolute;
+  color: white;
+  transform: rotate(-3deg);
+}
 

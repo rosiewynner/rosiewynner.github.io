@@ -12,14 +12,16 @@
     transition: all 100ms ease-out;
   }
 
-  .container img:hover  {
+  .container img:hover {
     transform: scale(1.04);
-  }
+    filter: brightness(0.5);
+    }
 
-  .caption:hover + .container img {
-    transform: scale(1.04);
-  }
-
+  h3:hover + .container {
+      transform: scale(1.04);
+      filter: brightness(0.5);
+      }
+  
   .container img:hover + .caption {
     visibility: visible;
   }
@@ -34,8 +36,6 @@
     padding: 15px;
     color: white;
     position: absolute;
-    // height: 338px;
-    // width: 338px;
     align-content: center;
     justify-content: center;
     font-style: normal;
