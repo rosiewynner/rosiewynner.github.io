@@ -11,7 +11,36 @@
     display: block;
     transition: all 100ms ease-out;
   }
-  
-  .container img:hover {
+
+  .container img:hover  {
     transform: scale(1.04);
+  }
+
+  .caption:hover + .container img {
+    transform: scale(1.04);
+  }
+
+  .container img:hover + .caption {
+    visibility: visible;
+  }
+
+  .caption:hover {
+    visibility: visible;
+  }
+
+  .caption{
+    visibility: hidden;
+    margin-top: -240px;
+    padding: 15px;
+    color: white;
+    position: absolute;
+    // height: 338px;
+    // width: 338px;
+    align-content: center;
+    justify-content: center;
+    font-style: normal;
+  }
+
+  .post {
+    position: relative;
   }
