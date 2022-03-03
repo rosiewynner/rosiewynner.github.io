@@ -33,7 +33,6 @@
 
 .page {
   background-image: url('../assets/cork.jpeg');
-  // background-size: cover;   
 }
 
 .polaroid {
@@ -53,3 +52,13 @@
   transform: rotate(-3deg);
 }
 
+.todo {
+  font-family: "HandWriting";
+  position: absolute;
+  color: black;
+  transform: rotate(-10deg);
+}
+
+.todobox {
+  transform: rotate(-10deg);
+}

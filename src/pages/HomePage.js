@@ -51,13 +51,20 @@ export function HomePage() {
          <div style={{display: 'flex', flexDirection: 'row'}}>
      <Draggable handle="#handle">
        <div className={'note'} style={{marginLeft: `${Math.random()*50}px`, marginTop:`${Math.random()*50}px`}}>
-         <img id="note" src={PushPin} width='40px' style={{position: 'absolute', marginLeft: '230px'}}/>
-         {/* <h1 class='handwriting' style={{marginTop: '15px', marginLeft: '280px'}}>Snowshoeing in Utah!</h1> */}
+         <img id="note" src={PushPin2} width='40px' style={{position: 'absolute', marginLeft: '200px', marginTop: '40px'}}/>
+         <h3 class='todo' style={{marginTop: '77px', marginLeft: '153px'}}>To do list</h3>
+         <input class='todobox' type="checkbox" checked={true} style={{marginTop: '134px', marginLeft: '72px', position: 'absolute'}} />
+         <h3 class='todo' style={{marginTop: '113px', marginLeft: '88px'}}>Write a novel</h3>
+         <input class='todobox' type="checkbox" checked={false} style={{marginTop: '156px', marginLeft: '76px', position: 'absolute'}} />
+         <h3 class='todo' style={{marginTop: '131px', marginLeft: '93px'}}>Climb Mount Rainier</h3>
+         <input class='todobox' type="checkbox" checked={true} style={{marginTop: '178px', marginLeft: '80px', position: 'absolute'}} />
+         <h3 class='todo' style={{marginTop: '150px', marginLeft: '98px'}}>Learn how to knit a hat</h3>
+         <input class='todobox' type="checkbox" checked={false} style={{marginTop: '200px', marginLeft: '84px', position: 'absolute'}} />
+         <h3 class='todo' style={{marginTop: '174px', marginLeft: '104px'}}>Make a video game</h3>
          <img  src={Note} width='500px'/>
          </div>
          </Draggable>
-         </div>
-         <div style={{display: 'flex', flexDirection: 'row'}}>
+      
      <Draggable handle="#handle">
        <div className={'snowshoeing'} style={{marginLeft: `${Math.random()*50}px`, marginTop:`${Math.random()*50}px`}}>
          <img id="handle" src={PushPin} width='40px' style={{position: 'absolute', marginLeft: '230px'}}/>
@@ -72,6 +79,8 @@ export function HomePage() {
          <img  src={Glacier} width='500px'/>
          </div>
          </Draggable>
+         </div>
+         <div style={{display: 'flex', flexDirection: 'row'}}>
          <Draggable handle="#handle">
        <div className={'yellowstone'} style={{marginLeft: `${Math.random()*50}px`, marginTop:`${Math.random()*50}px`}}>
          <img id="handle" src={PushPin3} width='40px' style={{position: 'absolute', marginLeft: '230px'}}/>

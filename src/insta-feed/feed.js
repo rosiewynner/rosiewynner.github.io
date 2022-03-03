@@ -38,7 +38,7 @@ const Feed = (props) => {
                     src={media_url} 
                     alt={caption} 
                 />
-                <div class='caption'>{caption}</div>
+                <h4 class='caption'>{caption}</h4>
                 </div>
             );
     }       

@@ -17,11 +17,11 @@
     filter: brightness(0.5);
     }
 
-  h3:hover + .container {
+  img h3:hover {
       transform: scale(1.04);
       filter: brightness(0.5);
       }
-  
+
   .container img:hover + .caption {
     visibility: visible;
   }
@@ -32,7 +32,7 @@
 
   .caption{
     visibility: hidden;
-    margin-top: -240px;
+    margin-top: -280px;
     padding: 15px;
     color: white;
     position: absolute;
