@@ -34,6 +34,9 @@ export function Header() {
         <LinkContainer to="/IceCream">
         <Nav.Link >Ice Cream Development</Nav.Link>
         </LinkContainer>
+        <LinkContainer to="/GalleryWall">
+        <Nav.Link >Gallery Wall</Nav.Link>
+        </LinkContainer>
       </Nav>
     </Navbar.Collapse>
     </Container>
