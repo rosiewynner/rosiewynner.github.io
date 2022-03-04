@@ -17,11 +17,6 @@
     filter: brightness(0.5);
     }
 
-  img h3:hover {
-      transform: scale(1.04);
-      filter: brightness(0.5);
-      }
-
   .container img:hover + .caption {
     visibility: visible;
   }
@@ -30,9 +25,15 @@
     visibility: visible;
   }
 
+  .caption:hover .container img {
+    transform: scale(1.04);
+    filter: brightness(0.5);
+  }
+
   .caption{
     visibility: hidden;
-    margin-top: -280px;
+    width: 300px;
+    margin-top: -310px;
     padding: 15px;
     color: white;
     position: absolute;
