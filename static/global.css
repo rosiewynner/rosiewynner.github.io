@@ -1,0 +1,16 @@
+html {
+    min-width: 1rem;
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+a {
+    font-family: 'Courier New', Courier, monospace;
+
+}
