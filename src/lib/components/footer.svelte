@@ -1,13 +1,12 @@
-
 <a href="https://www.linkedin.com/in/rosalieross/" class="fa"></a>
 
 <style>
-  .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-  }
+	.fa {
+		padding: 20px;
+		font-size: 30px;
+		width: 30px;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 50%;
+	}
 </style>

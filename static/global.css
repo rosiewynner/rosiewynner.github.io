@@ -3,6 +3,9 @@ html {
 
     scroll-behavior: smooth;
     scroll-padding-top: 10rem;
+
+
+    --room-background: #02422E;
 }
 
 body {
