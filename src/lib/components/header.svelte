@@ -2,12 +2,13 @@
 	import InstaIcon from '$lib/assets/instagram-icon.jpeg';
 	import KickStartIcon from '$lib/assets/kickstarter-icon.png';
 	import LinkedInIcon from '$lib/assets/linkedin-icon.png';
+	import { base } from '$app/paths';
 </script>
 
 <div class="header">
 	<img src="shelf.png" alt="shelf" class="shelf" />
 
-	<a class="home" href="/">Rosie Ross</a>
+	<a class="home" href="{base}/">Home</a>
 	<!-- <a href='https://www.linkedin.com/in/rosalieross/'> 
         <img src={LinkedInIcon} alt='linkedin' class="logo"/>
     </a>   
@@ -22,17 +23,14 @@
 </div>
 
 <style>
-	.shelf {
-		top: 0;
-		height: 300px;
-		position: fixed;
-		z-index: 2;
-	}
-
 	.header {
 		width: 100%;
 		display: flex;
 		justify-content: center;
+		top: 0;
+		height: var(--header-height);
+		position: fixed;
+		z-index: 2;
 	}
 
 	.home {

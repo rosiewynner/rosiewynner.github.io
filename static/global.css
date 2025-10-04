@@ -5,12 +5,15 @@ html {
     scroll-padding-top: 10rem;
 
 
+    --header-height: 20vh;
     --room-background: #02422E;
 }
 
 body {
     font-family: 'Courier New', Courier, monospace;
 
+    height: 100%;
+    width: 100%;
 }
 
 a {

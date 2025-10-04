@@ -1,7 +1,6 @@
-export async function load({ fetch }) {
-	const response = await fetch('api/calendar');
+import calendarData from '../../../static/cal-events.json';
 
-	const events = await response.json();
-
+export async function load() {
+	const events = calendarData.items;
 	return { events };
 }

@@ -1,9 +1,10 @@
 import { google } from 'googleapis';
+import fs from 'fs';
 const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
 
-export async function GET() {
+const getCalendarEvents = async () => {
 	const auth = new google.auth.GoogleAuth({
-		keyFile: 'src/routes/api/calendar/user.json',
+		keyFile: './user.json',
 		scopes: SCOPES
 	});
 
@@ -17,5 +18,7 @@ export async function GET() {
 		orderBy: 'startTime'
 	});
 
-	return new Response(JSON.stringify(res.data.items));
-}
+	fs.writeFileSync('static/cal-events.json', JSON.stringify(res.data));
+};
+
+await getCalendarEvents();

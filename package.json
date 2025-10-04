@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "node calendarScript.js && vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"format": "prettier --write .",
@@ -27,6 +27,7 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
+		"@sveltejs/adapter-static": "^3.0.10",
 		"axios": "^1.12.1",
 		"chart.js": "^4.5.0",
 		"googleapis": "^160.0.0",

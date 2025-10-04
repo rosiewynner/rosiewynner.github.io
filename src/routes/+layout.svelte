@@ -7,12 +7,27 @@
 
 <div class="layout">
 	<Header />
-	{@render children?.()}
+	<div class="page">
+		{@render children?.()}
+	</div>
 	<Footer />
 </div>
 
 <style>
+	.page {
+		position: fixed;
+		top: var(--header-height);
+		height: calc(100vh - var(--header-height));
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
 	.layout {
+		position: fixed;
+		width: 100%;
+		height: 100%;
 		background-color: var(--room-background);
+		z-index: 0;
 	}
 </style>

@@ -11,16 +11,14 @@
 	import '$lib/assets/hate_your_writing/Regular.ttf';
 </script>
 
-<div class="page">
-	<img src="rain-2.gif" class="office" />
-	<img src="office-2.svg" class="office" />
+<img src="rain-2.gif" class="office" />
+<img src="office-2.svg" class="office" />
 
-	<img class="ithaca bulletins" alt="ithaca" src={Ithaca} />
-	<img class="yellowstone bulletins" alt="yellowstone" src={Yellowstone} />
-	<img class="graduation bulletins" alt="graduation" src={Graduation} />
-	<img class="hiking bulletins" alt="Hiking" src={Hiking} />
-	<img class="glacier bulletins" alt="Glacier" src={Glacier} />
-</div>
+<img class="ithaca bulletins" alt="ithaca" src={Ithaca} />
+<img class="yellowstone bulletins" alt="yellowstone" src={Yellowstone} />
+<img class="graduation bulletins" alt="graduation" src={Graduation} />
+<img class="hiking bulletins" alt="Hiking" src={Hiking} />
+<img class="glacier bulletins" alt="Glacier" src={Glacier} />
 
 <style>
 	.bulletins {
@@ -28,19 +26,11 @@
 		z-index: 3;
 	}
 
-	.page {
-		/* background-color: #02422E; */
-		height: 100vh;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-	}
-
 	.office {
 		position: fixed;
 		z-index: 1;
-		top: 200px;
-		height: 90%;
+		top: var(--header-height);
+		height: calc(100vh - var(--header-height));
 	}
 
 	.ithaca {

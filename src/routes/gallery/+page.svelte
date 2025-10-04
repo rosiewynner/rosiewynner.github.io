@@ -7,29 +7,29 @@
 
 <style>
 	.avocado {
-		position: fixed;
+		position: relative;
 		left: 158px;
 		top: 290px;
 		height: 300px;
 	}
 
 	.moon {
-		position: fixed;
+		position: relative;
 		left: 782px;
 		top: 236px;
 		height: 300px;
 	}
 
 	.fish {
-		position: fixed;
+		position: relative;
 		left: 735px;
 		top: 565px;
 		height: 300px;
 	}
 
 	.painting {
-		position: fixed;
-		top: 300px;
+		position: relative;
+		/* top: 300px; */
 		left: 300px;
 		height: 300px;
 	}
