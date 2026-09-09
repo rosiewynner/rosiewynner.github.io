@@ -29,5 +29,6 @@
 		height: 100%;
 		background-color: var(--room-background);
 		z-index: 0;
+		left: 0;
 	}
 </style>

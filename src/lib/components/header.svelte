@@ -19,8 +19,10 @@
         <img src={InstaIcon} alt='instagram' class="logo"/>
     </a>
     <a href="/icecream">Ice Cream Development</a> -->
-	<a class="gallery rotated" href="/gallery">Gallery</a>
+	<!-- <a class="sewing rotated" href="/sewing">Sewing</a> -->
+	<a class="gallery rotated" href="/art">Art</a>
 </div>
+
 
 <style>
 	.header {
@@ -33,17 +35,33 @@
 		z-index: 2;
 	}
 
+	.shelf {
+		height: var(--header-height);
+		display: flex;
+		align-items: center;
+
+	}
+
+
+
 	.home {
-		position: fixed;
-		top: 125px;
-		left: 480px;
+		position: absolute;
+		top: 72px;
+  		left: 176.5px;	
+  		z-index: 3;
+	}
+
+	.sewing {
+		position: absolute;
+		top: 74px;
+		left: 358px;
 		z-index: 3;
 	}
 
 	.gallery {
-		position: fixed;
-		top: 125px;
-		left: 700px;
+		position: absolute;
+		top: 74px;
+  		left: 348px;		
 		z-index: 3;
 	}
 
@@ -52,7 +70,7 @@
 
 		&:hover {
 			cursor: pointer;
-			color: aliceblue;
+			color: #27445d;
 		}
 	}
 
