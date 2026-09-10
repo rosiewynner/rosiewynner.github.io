@@ -20,7 +20,7 @@
     </a>
     <a href="/icecream">Ice Cream Development</a> -->
 	<!-- <a class="sewing rotated" href="/sewing">Sewing</a> -->
-	<a class="gallery rotated" href="/art">Art</a>
+	<a class="gallery rotated" href="{base}/art">Art</a>
 </div>
 
 
