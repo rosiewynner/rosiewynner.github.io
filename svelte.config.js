@@ -6,6 +6,7 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter({
+			trailingSlash: 'always',
 			pages: 'build',
 			assets: 'build',
 			fallback: '404.html', 
