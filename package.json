@@ -4,10 +4,11 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "vite dev",
-		"build": "node calendarScript.js && vite build",
+		"dev": "vite",
+		"build": "vite build",
 		"preview": "vite preview",
-		"prepare": "svelte-kit sync || echo ''",
+		"predeploy": "bun run build",
+  		"deploy": "gh-pages -d dist",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint ."
 	},
@@ -30,6 +31,7 @@
 		"@sveltejs/adapter-static": "^3.0.10",
 		"axios": "^1.12.1",
 		"chart.js": "^4.5.0",
+		"gh-pages": "^6.3.0",
 		"googleapis": "^160.0.0",
 		"svelte-chartjs": "^3.1.5"
 	}
