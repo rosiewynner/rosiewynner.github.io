@@ -5,6 +5,7 @@ html {
     scroll-padding-top: 10rem;
 
     --header-height: 200px;
+    --header-width: 1280px;
     --room-background: #02422E;
 }
 

@@ -16,7 +16,7 @@
 <style>
 	.page {
 		position: fixed;
-		top: var(--header-height);
+		top: calc(20px + var(--header-height));
 		height: calc(100vh - var(--header-height));
 		width: 100%;
 		display: flex;

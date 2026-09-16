@@ -14,7 +14,6 @@
 <img src="rain-2.gif" class="rain" />
 <img src="office-2.svg" class="office" />
 
-
 <img class="hiking bulletins" alt="Hiking" src={Hiking} />
 <img class="glacier bulletins" alt="Glacier" src={Glacier} />
 
@@ -34,7 +33,7 @@
 	.office {
 		position: fixed;
 		z-index: 1;
-		top: var(--header-height);
+		top: calc(var(--header-height) - 4px);
 		height: calc(100vh - var(--header-height) + 10px);
 	}
 
@@ -48,7 +47,7 @@
 	.glacier {
 		position: fixed;
 		top: 260px;
-  		left: 500px;		
-  		height: 100px;
+		left: 500px;
+		height: 100px;
 	}
 </style>
