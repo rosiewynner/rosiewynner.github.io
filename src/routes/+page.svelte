@@ -11,12 +11,10 @@
 	import '$lib/assets/hate_your_writing/Regular.ttf';
 </script>
 
-<img src="rain-2.gif" class="office" />
+<img src="rain-2.gif" class="rain" />
 <img src="office-2.svg" class="office" />
 
-<img class="ithaca bulletins" alt="ithaca" src={Ithaca} />
-<img class="yellowstone bulletins" alt="yellowstone" src={Yellowstone} />
-<img class="graduation bulletins" alt="graduation" src={Graduation} />
+
 <img class="hiking bulletins" alt="Hiking" src={Hiking} />
 <img class="glacier bulletins" alt="Glacier" src={Glacier} />
 
@@ -26,40 +24,31 @@
 		z-index: 3;
 	}
 
-	.office {
+	.rain {
 		position: fixed;
-		z-index: 1;
+		z-index: 0;
 		top: var(--header-height);
 		height: calc(100vh - var(--header-height));
 	}
 
-	.ithaca {
-		top: 400px;
-		left: 640px;
-		height: 150px;
-	}
-
-	.yellowstone {
-		top: 260px;
-		left: 640px;
-		height: 100px;
+	.office {
+		position: fixed;
+		z-index: 1;
+		top: var(--header-height);
+		height: calc(100vh - var(--header-height) + 10px);
 	}
 
 	.hiking {
+		position: fixed;
 		top: 260px;
 		left: 20%;
 		height: 100px;
 	}
 
-	.graduation {
-		top: 400px;
-		left: 900px;
-		height: 150px;
-	}
-
 	.glacier {
+		position: fixed;
 		top: 260px;
-		left: 1050px;
-		height: 100px;
+  		left: 500px;		
+  		height: 100px;
 	}
 </style>

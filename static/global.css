@@ -4,8 +4,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 10rem;
 
-
-    --header-height: 20vh;
+    --header-height: 200px;
     --room-background: #02422E;
 }
 
