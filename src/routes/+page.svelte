@@ -1,26 +1,88 @@
 <script>
-	import Ithaca from '$lib/assets/ithaca-polaroid.svg';
-	import Cornell from '$lib/assets/cornell-polaroid.svg';
-	import Graduation from '$lib/assets/graduation-polaroid.svg';
-	import Metz from '$lib/assets/metz-polaroid.svg';
-	import Hiking from '$lib/assets/hiking.jpeg';
-	import Yellowstone from '$lib/assets/yellowstone.jpg';
-	import Glacier from '$lib/assets/glacier.jpg';
-	import Note from '$lib/assets/note.png';
+	import Carousel from '$lib/components/carousel.svelte';
+	let carouselOpen = false;
 
-	import '$lib/assets/hate_your_writing/Regular.ttf';
+	const photos = [
+		{ image: 'pnw1.jpg', caption: 'Mount Storm King, July 2025' },
+		{ image: 'pnw2.jpg', caption: 'Olympic National Park, July 2025' }
+	];
 </script>
 
 <img src="rain-2.gif" class="rain" />
 <img src="office-2.svg" class="office" />
+<div class="page-content">
+	<div class="bulletin-board">
+		<h1 class="bubbleletters">About me</h1>
 
-<img class="hiking bulletins" alt="Hiking" src={Hiking} />
-<img class="glacier bulletins" alt="Glacier" src={Glacier} />
+		<p class="bio">
+			Hello!
+			<br /> My name is Rosie and I am a Seattle, WA based software engineer.
+			<br /> This is my place to document all my projects.
+			<br />
+		</p>
+		<button class="button-wrapper" on:click={() => (carouselOpen = true)}>
+			<img src="washington.png" class="washington" />
+		</button>
+
+		<Carousel bind:open={carouselOpen} images={photos} />
+	</div>
+</div>
 
 <style>
-	.bulletins {
-		position: relative;
-		z-index: 3;
+	.page-content {
+		position: fixed;
+		z-index: 2;
+		top: var(--header-height);
+		height: calc(100vh - var(--header-height) + 10px);
+		width: auto;
+		aspect-ratio: 16 / 9;
+	}
+
+	.bulletin-board {
+		position: absolute;
+		top: 2.5%;
+		left: 2.5%;
+		right: 45.5%;
+		bottom: 42%;
+
+		display: flex;
+		column-gap: 10px;
+		justify-content: center;
+	}
+
+	.bubbleletters {
+		padding-top: 0.5%;
+		font-family: Atop;
+		position: fixed;
+		color: var(--color-green-medium);
+		font-size: clamp(4px, 3vh, 24px);
+		text-shadow:
+			-1px -1px 0 var(--accent-color),
+			1px -1px 0 var(--accent-color),
+			-1px 1px 0 var(--accent-color),
+			1px 1px 0 var(--accent-color);
+	}
+
+	.bio {
+		text-align: center;
+		padding-top: 6%;
+		width: 50%;
+	}
+
+	.washington {
+		padding-top: 6%;
+		height: 150px;
+		filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.5));
+
+		&:hover {
+			filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.5));
+		}
+	}
+
+	.button-wrapper {
+		background: none;
+		border: none;
+		cursor: pointer;
 	}
 
 	.rain {
@@ -37,17 +99,7 @@
 		height: calc(100vh - var(--header-height) + 10px);
 	}
 
-	.hiking {
-		position: fixed;
-		top: 260px;
-		left: 20%;
-		height: 100px;
-	}
-
-	.glacier {
-		position: fixed;
-		top: 260px;
-		left: 500px;
-		height: 100px;
+	.content {
+		height: calc(100vh - var(--header-height));
 	}
 </style>

@@ -1,36 +1,55 @@
 <script>
-	// import InstaIcon from '$lib/assets/instagram-icon.jpeg';
-	// import KickStartIcon from '$lib/assets/kickstarter-icon.png';
-	// import LinkedInIcon from '$lib/assets/linkedin-icon.png';
+	import Carousel from '$lib/components/carousel.svelte';
 	import { base } from '$app/paths';
+
+	let carouselOpen = false;
+
+	const photos = [
+		{ image: 'volc.avif', caption: 'Mount Doom, New Zealand, March 2026' },
+		{ image: 'running.jpg', caption: 'Chicago Half Marathon, April 2024' },
+		{ image: 'cats.avif', caption: 'Farosh and Molasses, August 2026' },
+		{ image: 'hobbiton.avif', caption: 'Hobbiton, New Zealand, March 2026' }
+	];
 </script>
 
 <div class="header-container">
 	<img src="shelf-new.png" alt="shelf" class="shelf" />
 
 	<div class="header-images">
-		<img src="volc.avif" class="volc" alt="nz volcano" />
+		<img
+			on:click={() => (carouselOpen = true)}
+			src="volc.avif"
+			class="volc carousel-button"
+			alt="nz volcano"
+		/>
+		<img
+			on:click={() => (carouselOpen = true)}
+			src="running.jpg"
+			class="running carousel-button"
+			alt="chicago marathon"
+		/>
+		<img
+			on:click={() => (carouselOpen = true)}
+			src="cats.avif"
+			class="cats carousel-button"
+			alt="cats"
+		/>
+		<img
+			on:click={() => (carouselOpen = true)}
+			src="hobbiton.avif"
+			class="hobbiton carousel-button"
+			alt="hobbiton"
+		/>
 
-		<img src="running.jpg" class="running" alt="chicago marathon" />
-		<img src="cats.avif" class="cats" alt="cats" />
-		<img src="hobbiton.avif" class="hobbiton" alt="hobbiton" />
-
-		<!-- <a href='https://www.linkedin.com/in/rosalieross/'> 
-			<img src={LinkedInIcon} alt='linkedin' class="logo"/>
-		</a>   
-		<a href='https://www.kickstarter.com/projects/1444231543/dont-let-ice-creams-be-dreams/description'>
-			<img src={KickStartIcon} alt='kickstarter'class="logo"/>
-		</a>
-		<a href='https://www.instagram.com/icecreamdreamsca/'> 
-			<img src={InstaIcon} alt='instagram' class="logo"/>
-		</a>
-		<a href="/icecream">Ice Cream Development</a> -->
+		<Carousel bind:open={carouselOpen} images={photos} />
 	</div>
 
 	<div class="header-links">
 		<a class="home rotated" href="{base}/">Home</a>
+		<a class="projects rotated" href="{base}/projects">Projects</a>
 		<a class="sewing rotated" href="{base}/sewing">Sewing</a>
 		<a class="gallery rotated" href="{base}/art">Art</a>
+		<a class="icecream" href="{base}/icecream">Ice Cream</a>
 	</div>
 </div>
 
@@ -55,6 +74,11 @@
 	.header-images {
 		width: var(--header-width);
 		position: fixed;
+	}
+
+	.carousel-button:hover {
+		filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.5));
+		cursor: pointer;
 	}
 
 	.volc {
@@ -104,17 +128,31 @@
 		}
 	}
 
+	.projects {
+		position: absolute;
+		top: 74px;
+		left: 244.5px;
+		z-index: 3;
+	}
+
 	.gallery {
 		position: absolute;
 		top: 74px;
-		left: 268.5px;
+		left: 292px;
 		z-index: 3;
 	}
 
 	.sewing {
 		position: absolute;
 		top: 74px;
-		left: 277px;
+		left: 300px;
+		z-index: 3;
+	}
+
+	.icecream {
+		position: absolute;
+		top: 72px;
+		left: 528px;
 		z-index: 3;
 	}
 

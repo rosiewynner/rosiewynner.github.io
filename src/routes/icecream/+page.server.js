@@ -1,9 +1,9 @@
-import { INSTAGRAM_ACCESS_TOKEN_SBR, INSTAGRAM_APP_ID_SBR } from '$env/static/private';
+import { INSTAGRAM_APP_ID_ICD, INSTAGRAM_ACCESS_TOKEN_ICD } from '$env/static/private';
 
 export const prerender = true;
 
 export const load = async ({ fetch }) => {
-	const url = new URL(`https://graph.instagram.com/v21.0/${INSTAGRAM_APP_ID_SBR}/media`);
+	const url = new URL(`https://graph.instagram.com/v21.0/${INSTAGRAM_APP_ID_ICD}/media`);
 
 	url.searchParams.set(
 		'fields',
@@ -12,7 +12,8 @@ export const load = async ({ fetch }) => {
 		)
 	);
 
-	url.searchParams.set('access_token', INSTAGRAM_ACCESS_TOKEN_SBR);
+	url.searchParams.set('access_token', INSTAGRAM_ACCESS_TOKEN_ICD);
+	url.searchParams.set('limit', '100');
 
 	const response = await fetch(url);
 

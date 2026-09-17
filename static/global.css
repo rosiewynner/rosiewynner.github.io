@@ -7,6 +7,25 @@ html {
     --header-height: 200px;
     --header-width: 1280px;
     --room-background: #02422E;
+
+    --color-green-darkest:#2D3C01;
+    --color-green-dark: #036245;
+    --color-green-medium: #6B8903;
+    --color-green-light: #DDFB74;
+
+    --color-brown-medium: #614A2C;
+    --color-brown-light:#B08756;
+
+    --accent-color: white;
+
+}
+
+@font-face {
+  font-family: 'Atop';
+  src: url('./atop-font/Atop-R99O3.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
