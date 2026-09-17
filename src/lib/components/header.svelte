@@ -53,7 +53,6 @@
 	}
 
 	.header-images {
-		height: 100%;
 		width: var(--header-width);
 		position: fixed;
 	}
@@ -87,7 +86,6 @@
 	}
 
 	.header-links {
-		height: 100%;
 		width: var(--header-width);
 		position: fixed;
 	}
