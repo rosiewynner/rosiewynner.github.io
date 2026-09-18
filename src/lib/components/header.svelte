@@ -2,6 +2,7 @@
 	import Carousel from '$lib/components/carousel.svelte';
 	import { base } from '$app/paths';
 
+	let { collapsed = $bindable(false) } = $props();
 	let carouselOpen = false;
 
 	const photos = [
@@ -12,7 +13,7 @@
 	];
 </script>
 
-<div class="header-container">
+<div class:collapsed class="header-container">
 	<img src="shelf-new.png" alt="shelf" class="shelf" />
 
 	<div class="header-images">
@@ -48,22 +49,47 @@
 		<a class="home rotated" href="{base}/">Home</a>
 		<a class="projects rotated" href="{base}/projects">Projects</a>
 		<a class="sewing rotated" href="{base}/sewing">Sewing</a>
-		<a class="gallery rotated" href="{base}/art">Art</a>
+		<a class="baking rotated" href="{base}/dessert">Baking</a>
 		<a class="icecream" href="{base}/icecream">Ice Cream</a>
+		<a class="art" href="{base}/art">Gallery</a>
 	</div>
 </div>
+
+<!-- Drawer handle -->
+
+<button
+	class:collapsed
+	class="drawer-handle"
+	on:click={() => (collapsed = !collapsed)}
+	aria-label={collapsed ? 'Open header' : 'Close header'}
+>
+	<span>{collapsed ? '↓' : '↑'}</span>
+</button>
 
 <style>
 	.header-container {
 		width: 100%;
 		display: flex;
 		justify-content: center;
+
 		top: 20px;
 		height: var(--header-height);
+
 		position: fixed;
 		z-index: 2;
+
+		transition: transform 0.4s ease;
 	}
 
+	/*
+	 * Slide the entire shelf upward.
+	 *
+	 * Keep 30px visible so the drawer handle
+	 * has somewhere to live.
+	 */
+	.header-container.collapsed {
+		transform: translateY(calc(-1 * var(--header-height) + 30px));
+	}
 	.shelf {
 		height: var(--header-height);
 		width: var(--header-width);
@@ -135,10 +161,10 @@
 		z-index: 3;
 	}
 
-	.gallery {
+	.baking {
 		position: absolute;
 		top: 74px;
-		left: 292px;
+		left: 278px;
 		z-index: 3;
 	}
 
@@ -156,6 +182,13 @@
 		z-index: 3;
 	}
 
+	.art {
+		position: absolute;
+		top: 89px;
+		left: 536px;
+		z-index: 3;
+	}
+
 	a {
 		color: white;
 
@@ -167,5 +200,46 @@
 
 	.rotated {
 		transform: rotate(-90deg);
+	}
+
+	/*
+	 * Drawer handle
+	 */
+
+	.drawer-handle {
+		position: fixed;
+
+		top: 0;
+		left: 50%;
+
+		transform: translateX(-50%);
+
+		width: 80px;
+		height: 24px;
+
+		z-index: 10;
+
+		border: none;
+
+		border-radius: 0 0 12px 12px;
+
+		background: #27445d;
+
+		color: white;
+
+		cursor: pointer;
+
+		transition:
+			background 0.2s ease,
+			height 0.2s ease;
+	}
+
+	.drawer-handle:hover {
+		height: 30px;
+		background: #1d3448;
+	}
+
+	.drawer-handle span {
+		font-size: 14px;
 	}
 </style>

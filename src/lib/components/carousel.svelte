@@ -113,6 +113,7 @@
 		height: min(70vh, 500px);
 
 		perspective: 1000px;
+		color: black;
 	}
 
 	.card {

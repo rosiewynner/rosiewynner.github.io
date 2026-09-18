@@ -16,7 +16,7 @@
 
 		<p class="bio">
 			Hello!
-			<br /> My name is Rosie and I am a Seattle, WA based software engineer.
+			<br /> My name is Rosie and I a software engineer based in the beautiful Pacific Northwest.
 			<br /> This is my place to document all my projects.
 			<br />
 		</p>

@@ -9,12 +9,6 @@
 </div>
 
 <style>
-	.page {
-		overflow: scroll;
-		/* display: flex;
-		justify-content: center; */
-	}
-
 	.art-container {
 		display: flex;
 		padding: 30px;

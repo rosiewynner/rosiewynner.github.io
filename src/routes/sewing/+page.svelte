@@ -22,7 +22,6 @@
 
 <style>
 	.page {
-		overflow: scroll;
 	}
 
 	.grid {
