@@ -1,7 +1,40 @@
 <script>
 	import { onMount, onDestroy } from 'svelte';
-
 	import { Title, Chart, ArcElement, Tooltip, Legend, PieController } from 'chart.js';
+
+	const centerTextPlugin = {
+		id: 'centerText',
+
+		beforeDraw(chart, args, options) {
+			const { ctx, chartArea } = chart;
+
+			if (!chartArea) return;
+
+			const total = options.total ?? 0;
+
+			const x = (chartArea.left + chartArea.right) / 2;
+			const y = (chartArea.top + chartArea.bottom) / 2;
+
+			ctx.save();
+
+			ctx.textAlign = 'center';
+			ctx.textBaseline = 'middle';
+
+			// Number
+			ctx.font = 'bold 32px sans-serif';
+			ctx.fillStyle = '#27445d';
+
+			ctx.fillText(total, x, y - 8);
+
+			// Label
+			ctx.font = '14px sans-serif';
+			ctx.fillStyle = '#666';
+
+			ctx.fillText('recipes', x, y + 22);
+
+			ctx.restore();
+		}
+	};
 
 	Chart.register(Title, PieController, ArcElement, Tooltip, Legend);
 
@@ -39,9 +72,11 @@
 		const labels = Object.keys(categories);
 		const data = Object.values(categories);
 
-		return new Chart(canvas, {
-			type: 'pie',
+		const total = data.reduce((sum, value) => sum + Number(value), 0);
 
+		return new Chart(canvas, {
+			type: 'doughnut',
+			plugins: [centerTextPlugin],
 			data: {
 				labels,
 
@@ -59,6 +94,8 @@
 			},
 
 			options: {
+				cutout: '65%',
+
 				responsive: true,
 
 				maintainAspectRatio: false,
@@ -66,6 +103,10 @@
 				plugins: {
 					legend: {
 						position: 'right'
+					},
+
+					centerText: {
+						total
 					},
 
 					title: {
