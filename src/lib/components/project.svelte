@@ -28,11 +28,13 @@
 		height: 400px;
 		color: black;
 		border-radius: 2rem;
-		background-color: aliceblue;
+		border: none;
+		background-color: var(--accent-color-2);
 
 		&:hover {
 			filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.5));
 			cursor: pointer;
+			background-color: var(--color-green-light);
 		}
 	}
 

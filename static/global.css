@@ -17,6 +17,7 @@ html {
     --color-brown-light:#B08756;
 
     --accent-color: white;
+    --accent-color-2: aliceblue;
 
 }
 
@@ -42,4 +43,8 @@ a {
 
 button {
     font-family: 'Courier New', Courier, monospace;
+}
+
+h1, h2, h3 {
+    margin: 0;
 }

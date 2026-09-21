@@ -32,13 +32,31 @@
 	];
 </script>
 
-<div class="projects">
-	{#each projects as project}
-		<Project {project} />
-	{/each}
+<div class="contents">
+	<div class="title">
+		<h2>My projects</h2>
+		<h3>Click a project for more</h3>
+	</div>
+	<div class="projects">
+		{#each projects as project}
+			<Project {project} />
+		{/each}
+	</div>
 </div>
 
 <style>
+	.contents {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.title {
+		display: flex;
+		color: white;
+		flex-direction: column;
+		padding-bottom: 2rem;
+	}
+
 	.projects {
 		display: flex;
 		gap: 2rem;
