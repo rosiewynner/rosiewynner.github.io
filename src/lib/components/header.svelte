@@ -3,7 +3,11 @@
 	import { base } from '$app/paths';
 
 	let { collapsed = $bindable(false) } = $props();
-	let carouselOpen = false;
+	let carouselOpen = $state(false);
+
+	const openCarousel = () => {
+		carouselOpen = true;
+	};
 
 	const photos = [
 		{ image: 'volc.avif', caption: 'Mount Doom, New Zealand, March 2026' },
@@ -17,32 +21,20 @@
 	<img src="shelf-new.png" alt="shelf" class="shelf" />
 
 	<div class="header-images">
+		<img on:click={openCarousel} src="volc.avif" class="volc carousel-button" alt="nz volcano" />
 		<img
-			on:click={() => (carouselOpen = true)}
-			src="volc.avif"
-			class="volc carousel-button"
-			alt="nz volcano"
-		/>
-		<img
-			on:click={() => (carouselOpen = true)}
+			on:click={openCarousel}
 			src="running.jpg"
 			class="running carousel-button"
 			alt="chicago marathon"
 		/>
+		<img on:click={openCarousel} src="cats.avif" class="cats carousel-button" alt="cats" />
 		<img
-			on:click={() => (carouselOpen = true)}
-			src="cats.avif"
-			class="cats carousel-button"
-			alt="cats"
-		/>
-		<img
-			on:click={() => (carouselOpen = true)}
+			on:click={openCarousel}
 			src="hobbiton.avif"
 			class="hobbiton carousel-button"
 			alt="hobbiton"
 		/>
-
-		<Carousel bind:open={carouselOpen} images={photos} />
 	</div>
 
 	<div class="header-links">
@@ -54,6 +46,8 @@
 		<a class="art" href="{base}/art">Gallery</a>
 	</div>
 </div>
+
+<Carousel bind:open={carouselOpen} images={photos} />
 
 <!-- Drawer handle -->
 
