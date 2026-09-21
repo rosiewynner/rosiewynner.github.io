@@ -76,7 +76,6 @@
 		height: var(--header-height);
 
 		position: fixed;
-		z-index: 2;
 
 		transition: transform 0.4s ease;
 	}

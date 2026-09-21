@@ -16,9 +16,9 @@
 
 		<p class="bio">
 			Hello!
-			<br /> My name is Rosie and I a software engineer based in the beautiful Pacific Northwest.
-			<br /> This is my place to document all my projects.
+			<br /> My name is Rosie and I a software engineer based in Seattle, WA.
 			<br />
+			<br /> This is my place to document all my projects.
 		</p>
 		<button class="button-wrapper" on:click={() => (carouselOpen = true)}>
 			<img src="washington.png" class="washington" />
