@@ -5,8 +5,8 @@
 
 <div class="page">
 	<div class="grid">
-		{#each data.posts as post}
-			<Post {post} />
+		{#each data.posts as post, index}
+			<Post {post} loadingLazy={index > 10} />
 		{/each}
 	</div>
 </div>

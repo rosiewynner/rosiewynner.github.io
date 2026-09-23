@@ -1,5 +1,6 @@
 <script>
 	export let post;
+	export let loadingLazy;
 </script>
 
 <div class="post-container">
@@ -7,6 +8,7 @@
 		class="post"
 		src={post.media_type === 'VIDEO' ? post.thumbnail_url : post.media_url}
 		alt={post.caption ?? ''}
+		loading={loadingLazy ? 'lazy' : ''}
 	/>
 
 	<div class="overlay">
