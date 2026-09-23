@@ -1,10 +1,10 @@
 <div class="page">
 	<div class="art-container">
-		<img alt="rope" class="rope" src="ropeart.png" />
-		<img alt="avocado" class="avocado shadow" src="avocados.jpg" />
-		<img alt="moon" class="moon shadow" src="moon.avif" />
-		<img alt="fish" class="fish shadow" src="fish.jpg" />
-		<img alt="painting" class="painting shadow" src="painting2019.webp" />
+		<img alt="rope" class="rope" src="gallery/ropeart.png" />
+		<img alt="avocado" class="avocado shadow" src="gallery/avocados.jpg" />
+		<img alt="moon" class="moon shadow" src="gallery/moon.avif" />
+		<img alt="fish" class="fish shadow" src="gallery/fish.jpg" />
+		<img alt="painting" class="painting shadow" src="gallery/painting2019.webp" />
 	</div>
 </div>
 

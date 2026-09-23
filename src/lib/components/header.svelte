@@ -10,28 +10,33 @@
 	};
 
 	const photos = [
-		{ image: 'volc.avif', caption: 'Mount Doom, New Zealand, March 2026' },
-		{ image: 'running.jpg', caption: 'Chicago Half Marathon, April 2024' },
-		{ image: 'cats.avif', caption: 'Farosh and Molasses, August 2026' },
-		{ image: 'hobbiton.avif', caption: 'Hobbiton, New Zealand, March 2026' }
+		{ image: 'home/volc.avif', caption: 'Mount Doom, New Zealand, March 2026' },
+		{ image: 'home/running.jpg', caption: 'Chicago Half Marathon, April 2024' },
+		{ image: 'home/cats.avif', caption: 'Farosh and Molasses, August 2026' },
+		{ image: 'home/hobbiton.avif', caption: 'Hobbiton, New Zealand, March 2026' }
 	];
 </script>
 
 <div class:collapsed class="header-container">
-	<img src="shelf-new.png" alt="shelf" class="shelf" />
+	<img src="background/shelf.png" alt="shelf" class="shelf" />
 
 	<div class="header-images">
-		<img on:click={openCarousel} src="volc.avif" class="volc carousel-button" alt="nz volcano" />
 		<img
 			on:click={openCarousel}
-			src="running.jpg"
+			src="home/volc.avif"
+			class="volc carousel-button"
+			alt="nz volcano"
+		/>
+		<img
+			on:click={openCarousel}
+			src="home/running.jpg"
 			class="running carousel-button"
 			alt="chicago marathon"
 		/>
-		<img on:click={openCarousel} src="cats.avif" class="cats carousel-button" alt="cats" />
+		<img on:click={openCarousel} src="home/cats.avif" class="cats carousel-button" alt="cats" />
 		<img
 			on:click={openCarousel}
-			src="hobbiton.avif"
+			src="home/hobbiton.avif"
 			class="hobbiton carousel-button"
 			alt="hobbiton"
 		/>

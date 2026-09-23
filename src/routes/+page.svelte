@@ -3,13 +3,13 @@
 	let carouselOpen = false;
 
 	const photos = [
-		{ image: 'pnw1.jpg', caption: 'Mount Storm King, July 2025' },
-		{ image: 'pnw2.jpg', caption: 'Olympic National Park, July 2025' }
+		{ image: 'home/pnw1.jpg', caption: 'Mount Storm King, July 2025' },
+		{ image: 'home/pnw2.jpg', caption: 'Olympic National Park, July 2025' }
 	];
 </script>
 
-<img src="rain-2.gif" class="rain" />
-<img src="office-2.svg" class="office" />
+<img src="background/rain.gif" class="rain" alt="rain" />
+<img src="background/office.svg" class="office" alt="office" />
 <div class="page-content">
 	<div class="bulletin-board">
 		<h1 class="bubbleletters">About me</h1>
@@ -21,7 +21,7 @@
 			<br /> This is my place to document all my projects.
 		</p>
 		<button class="button-wrapper" on:click={() => (carouselOpen = true)}>
-			<img src="washington.png" class="washington" />
+			<img src="home/washington.png" class="washington" alt="washington state" />
 		</button>
 
 		<Carousel bind:open={carouselOpen} images={photos} />
