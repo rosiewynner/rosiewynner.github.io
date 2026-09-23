@@ -24,7 +24,7 @@
 	.project {
 		display: flex;
 		flex-direction: row;
-		width: 600px;
+		width: 650px;
 		height: 400px;
 		color: black;
 		border-radius: 2rem;
@@ -40,6 +40,7 @@
 
 	.title {
 		margin: 0;
+		color: black;
 	}
 
 	.description {

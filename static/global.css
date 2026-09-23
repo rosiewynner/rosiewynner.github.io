@@ -45,6 +45,10 @@ button {
     font-family: 'Courier New', Courier, monospace;
 }
 
+h1 {
+    color: var(--accent-color);
+}
+
 h1, h2, h3 {
     margin: 0;
 }

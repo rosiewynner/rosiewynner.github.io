@@ -6,15 +6,17 @@
 </script>
 
 <div class="page">
+	<h1>Summer of 2020, 'stuck at home,' I learned to make ice cream</h1>
 	<div class="grid">
-		{#each data.posts as post}
-			<Post {post} />
+		{#each data.posts as post, index}
+			<Post {post} loadingLazy={index > 9} />
 		{/each}
 	</div>
 </div>
 
 <style>
 	.page {
+		text-align: center;
 	}
 
 	.grid {
