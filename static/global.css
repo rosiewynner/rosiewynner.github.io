@@ -48,3 +48,30 @@ button {
 h1, h2, h3 {
     margin: 0;
 }
+
+/* 1. Standard approach (Firefox and modern Chrome/Safari) */
+* {
+  scrollbar-width: thin; /* Makes scrollbar narrow */
+  scrollbar-color: #cbd5e1 transparent; /* Thumb color / Track background */
+}
+
+/* 2. WebKit approach (Chrome, Edge, Safari, Opera) */
+*::-webkit-scrollbar {
+  width: 8px; /* Thickness of the vertical scrollbar */
+  height: 8px; /* Thickness of the horizontal scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent; /* Makes the track invisible for a clean look */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1; /* Subtle gray color for the draggable thumb */
+  border-radius: 10px; /* Fully rounds the edges of the thumb */
+  border: 2px solid transparent; /* Creates padding space around thumb */
+}
+
+/* Darkens the thumb slightly when hovered */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8; 
+}

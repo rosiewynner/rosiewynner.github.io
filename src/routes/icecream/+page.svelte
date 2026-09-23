@@ -1,4 +1,5 @@
 <script>
+	import Post from '$lib/components/post.svelte';
 	let { data } = $props();
 
 	console.log({ data });
@@ -7,17 +8,7 @@
 <div class="page">
 	<div class="grid">
 		{#each data.posts as post}
-			<div class="post-container">
-				<img
-					class="post"
-					src={post.media_type === 'VIDEO' ? post.thumbnail_url : post.media_url}
-					alt={post.caption ?? ''}
-				/>
-
-				<div class="overlay">
-					<p class="caption">{post.caption ?? ''}</p>
-				</div>
-			</div>
+			<Post {post} />
 		{/each}
 	</div>
 </div>
@@ -34,44 +25,5 @@
 		column-gap: 30px;
 		justify-content: center;
 		align-items: center;
-	}
-
-	.post-container {
-		position: relative;
-		width: 300px;
-		height: 300px;
-	}
-
-	.post {
-		width: 100%;
-		height: 100%;
-		display: block;
-		object-fit: cover;
-	}
-
-	.overlay {
-		position: absolute;
-		inset: 0;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		padding: 2rem;
-		box-sizing: border-box;
-
-		background: rgba(0, 0, 0, 0.5);
-		color: white;
-		text-align: center;
-
-		opacity: 0;
-	}
-
-	.post-container:hover .overlay {
-		opacity: 1;
-	}
-
-	.caption {
-		margin: 0;
 	}
 </style>
