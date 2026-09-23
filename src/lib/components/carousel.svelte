@@ -50,7 +50,7 @@
 			<div class="cards">
 				{#each images as { image, caption }, index}
 					<div class={getCard(index, current)}>
-						<img src={image} alt={`Carousel image ${index + 1}`} draggable="false" />
+						<img src={image} alt={`Carousel image ${index + 1}`} draggable="false" loading="lazy" />
 						<p>{caption}</p>
 					</div>
 				{/each}
