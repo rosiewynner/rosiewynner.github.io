@@ -9,12 +9,13 @@
 	let carouselOpen = false;
 
 	const photos = [
-		{ image: 'BloodOrangeCake.jpg', caption: 'Blood Orange & Olive Oil Upside Down Cake' },
-		{ image: 'BriocheTwists.jpg', caption: 'Brioche Twists' },
-		{ image: 'croquembouche.jpg', caption: 'Croquembouche' },
-		{ image: 'chocolatecake.jpg', caption: 'Classic Birthday Cake' },
-		{ image: 'kouign-amann.jpg', caption: 'Kouign-Amann' },
-		{ image: 'TarteTropezienne.jpg', caption: 'Tarte Tropezienne' }
+		{ image: 'desserts/BloodOrangeCake.jpg', caption: 'Blood Orange & Olive Oil Cake' },
+		{ image: 'desserts/BriocheTwists.jpg', caption: 'Brioche Twists' },
+		{ image: 'desserts/croquembouche.jpg', caption: 'Croquembouche' },
+		{ image: 'desserts/chocolatecake.jpg', caption: 'Classic Birthday Cake' },
+		{ image: 'desserts/kouign-amann.jpg', caption: 'Kouign-Amann' },
+		{ image: 'desserts/TarteTropezienne.jpg', caption: 'Tarte Tropezienne' },
+		{ image: 'desserts/seedymaplebreakfastmuffin.jpg', caption: 'Seedy Maple Breakfast Muffins' }
 	];
 </script>
 
@@ -29,38 +30,44 @@
 	<div class="pics">
 		<img
 			class="dessertpic"
-			src="BloodOrangeCake.jpg"
+			src="desserts/BloodOrangeCake.jpg"
 			alt="Blood Orange & Olive Oil Upside Down Cake"
 			on:click={() => (carouselOpen = true)}
 		/>
 		<img
 			class="dessertpic"
-			src="BriocheTwists.jpg"
+			src="desserts/BriocheTwists.jpg"
 			alt="Brioche Twists"
 			on:click={() => (carouselOpen = true)}
 		/>
 		<img
 			class="dessertpic"
-			src="croquembouche.jpg"
+			src="desserts/croquembouche.jpg"
 			alt="Croquembouche"
 			on:click={() => (carouselOpen = true)}
 		/>
 		<img
 			class="dessertpic"
-			src="chocolatecake.jpg"
+			src="desserts/chocolatecake.jpg"
 			alt="Classic Birthday Cake"
 			on:click={() => (carouselOpen = true)}
 		/>
 		<img
 			class="dessertpic"
-			src="kouign-amann.jpg"
+			src="desserts/kouign-amann.jpg"
 			alt="Kouign-Amann"
 			on:click={() => (carouselOpen = true)}
 		/>
 		<img
 			class="dessertpic"
-			src="TarteTropezienne.jpg"
+			src="desserts/TarteTropezienne.jpg"
 			alt="Tarte Tropezienne"
+			on:click={() => (carouselOpen = true)}
+		/>
+		<img
+			class="dessertpic"
+			src="desserts/seedymaplebreakfastmuffin.jpg"
+			alt="Seedy Maple Breakfast Muffins"
 			on:click={() => (carouselOpen = true)}
 		/>
 	</div>
