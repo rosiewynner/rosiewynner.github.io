@@ -9,9 +9,9 @@
 	let carouselOpen = false;
 
 	const photos = [
-		{ image: 'desserts/BloodOrangeCake.jpg', caption: 'Blood Orange & Olive Oil Cake' },
+		{ image: 'desserts/BloodOrangeCake.avif', caption: 'Blood Orange & Olive Oil Cake' },
 		{ image: 'desserts/BriocheTwists.jpg', caption: 'Brioche Twists' },
-		{ image: 'desserts/croquembouche.jpg', caption: 'Croquembouche' },
+		{ image: 'desserts/croquembouche.avif', caption: 'Croquembouche' },
 		{ image: 'desserts/chocolatecake.jpg', caption: 'Classic Birthday Cake' },
 		{ image: 'desserts/kouign-amann.jpg', caption: 'Kouign-Amann' },
 		{ image: 'desserts/TarteTropezienne.jpg', caption: 'Tarte Tropezienne' },
@@ -30,7 +30,7 @@
 	<div class="pics">
 		<img
 			class="dessertpic"
-			src="desserts/BloodOrangeCake.jpg"
+			src="desserts/BloodOrangeCake.avif"
 			alt="Blood Orange & Olive Oil Upside Down Cake"
 			on:click={() => (carouselOpen = true)}
 		/>
@@ -42,7 +42,7 @@
 		/>
 		<img
 			class="dessertpic"
-			src="desserts/croquembouche.jpg"
+			src="desserts/croquembouche.avif"
 			alt="Croquembouche"
 			on:click={() => (carouselOpen = true)}
 		/>

@@ -5,16 +5,16 @@
 			title: `'Stained Glass' Door`,
 			description:
 				'Decorated front door glass using stained glass paint to resemble other stained glass windows in our apartment.',
-			coverphoto: 'stainedglass/outside.JPG',
+			coverphoto: 'stainedglass/outside.avif',
 			photos: [
 				{ image: 'stainedglass/design.JPG', caption: 'design made with Adoble Illustrator' },
-				{ image: 'stainedglass/painting.JPG', caption: 'painting late at night' },
+				{ image: 'stainedglass/painting.avif', caption: 'painting late at night' },
 				{
-					image: 'stainedglass/closeup.JPG',
+					image: 'stainedglass/closeup.avif',
 					caption: 'black lines made with dried piped paint'
 				},
 				{ image: 'stainedglass/inspo.JPG', caption: 'reference photo' },
-				{ image: 'stainedglass/outside.JPG', caption: '' }
+				{ image: 'stainedglass/inside.avif', caption: '' }
 			]
 		},
 		{
@@ -23,10 +23,10 @@
             for the holidays. Stemming from our shared love of escape rooms, Zelda dungeons, and Puzzled Pint, our goal is a 
 			themed experience that contains a series of non-linear puzzles that build together
 			to a final cumulative puzzle.`,
-			coverphoto: 'puzzlebox/puzzlebox2023.JPG',
+			coverphoto: 'puzzlebox/puzzlebox2023.avif',
 			photos: [
-				{ image: 'puzzlebox/puzzlebox2023.JPG', caption: 'Puzzlebox 2023' },
-				{ image: 'puzzlebox/puzzlebox2024.JPG', caption: 'Puzzlebox 2024' }
+				{ image: 'puzzlebox/puzzlebox2023.avif', caption: 'Puzzlebox 2023' },
+				{ image: 'puzzlebox/puzzlebox2024.avif', caption: 'Puzzlebox 2024' }
 			]
 		},
 		{

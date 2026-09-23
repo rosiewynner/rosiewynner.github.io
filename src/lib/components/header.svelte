@@ -11,7 +11,7 @@
 
 	const photos = [
 		{ image: 'home/volc.avif', caption: 'Mount Doom, New Zealand, March 2026' },
-		{ image: 'home/running.jpg', caption: 'Chicago Half Marathon, April 2024' },
+		{ image: 'home/running.avif', caption: 'Chicago Half Marathon, April 2024' },
 		{ image: 'home/cats.avif', caption: 'Farosh and Molasses, August 2026' },
 		{ image: 'home/hobbiton.avif', caption: 'Hobbiton, New Zealand, March 2026' }
 	];
@@ -29,7 +29,7 @@
 		/>
 		<img
 			on:click={openCarousel}
-			src="home/running.jpg"
+			src="home/running.avif"
 			class="running carousel-button"
 			alt="chicago marathon"
 		/>

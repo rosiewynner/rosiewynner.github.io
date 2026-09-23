@@ -3,8 +3,8 @@
 	let carouselOpen = false;
 
 	const photos = [
-		{ image: 'home/pnw1.jpg', caption: 'Mount Storm King, July 2025' },
-		{ image: 'home/pnw2.jpg', caption: 'Olympic National Park, July 2025' }
+		{ image: 'home/pnw1.avif', caption: 'Mount Storm King, July 2025' },
+		{ image: 'home/pnw2.avif', caption: 'Olympic National Park, July 2025' }
 	];
 </script>
 
@@ -21,7 +21,7 @@
 			<br /> This is my place to document all my projects.
 		</p>
 		<button class="button-wrapper" on:click={() => (carouselOpen = true)}>
-			<img src="home/washington.png" class="washington" alt="washington state" />
+			<img src="home/washington.webp" class="washington" alt="washington state" />
 		</button>
 
 		<Carousel bind:open={carouselOpen} images={photos} />
