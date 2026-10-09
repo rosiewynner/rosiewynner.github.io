@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches: 'main' # Replace with master if that is your default branch
+  schedule:
+    # Runs at 00:00 UTC on days 1, 5, 9, 13, 17, 21, 25, and 29 of every month
+    - cron: '0 0 */4 * *'
 
 permissions:
   contents: read
